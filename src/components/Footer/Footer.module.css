@@ -1,0 +1,118 @@
+.footer {
+  background: var(--night-deep);
+  border-top: 1px solid var(--border-gold);
+  margin-top: auto;
+}
+
+.inner {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-lg);
+}
+
+.divider {
+  margin-bottom: var(--space-xl);
+}
+
+.divider img {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.crest {
+  opacity: 0.85;
+  transition: opacity var(--dur-mid) var(--ease),
+              filter var(--dur-mid) var(--ease);
+}
+
+.crest:hover {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+}
+
+.motto {
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 220px;
+}
+
+.colTitle {
+  font-size: 0.75rem;
+  font-variant: small-caps;
+  letter-spacing: 0.2em;
+  color: var(--gold-soft);
+  margin-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-gold);
+  padding-bottom: var(--space-sm);
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.linkList a {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease),
+              padding-left var(--dur-fast) var(--ease);
+  display: inline-block;
+}
+
+.linkList a:hover,
+.linkList a:focus {
+  color: var(--gold-pale);
+  padding-left: 6px;
+}
+
+.bottom {
+  border-top: 1px solid var(--border-gold);
+  padding-top: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.star {
+  color: var(--gold-soft);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.bottom p {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+  .brand { grid-column: 1 / -1; flex-direction: row; align-items: center; }
+  .motto { font-size: 0.82rem; }
+}
+
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr; }
+  .brand { flex-direction: column; }
+}

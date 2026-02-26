@@ -1,0 +1,189 @@
+/* ============================================
+   LOS VIAJEROS DE ARCADIA — Global Styles
+   ============================================ */
+
+/* --- Variables --- */
+:root {
+  /* Palette */
+  --forest-dark:    #0a1a0f;
+  --forest-mid:     #1a3a2a;
+  --forest-light:   #2d5a3d;
+  --night-deep:     #060d14;
+  --night-mid:      #0d1b2a;
+  --night-blue:     #1a2d45;
+  --gold-bright:    #d4af37;
+  --gold-soft:      #c9a84c;
+  --gold-pale:      #e8d5a3;
+  --parchment:      #f0e6c8;
+  --parchment-dark: #d4b896;
+  --parchment-mid:  #c8a96e;
+  --brown-dark:     #6b4a10;
+  --brown-mid:      #8b6914;
+  --ember:          #c0440a;
+  --ember-bright:   #e85d04;
+
+  /* Text */
+  --text-primary:   #e8d5a3;
+  --text-secondary: #b8a87a;
+  --text-dim:       #7a6a52;
+  --text-on-light:  #2a1f0e;
+  --text-heading:   #d4af37;
+
+  /* Borders */
+  --border-gold:    rgba(212, 175, 55, 0.30);
+  --border-gold-hi: rgba(212, 175, 55, 0.65);
+  --border-parch:   rgba(200, 169, 110, 0.40);
+
+  /* Surfaces */
+  --surface-dark:   rgba(7, 13, 20, 0.85);
+  --surface-mid:    rgba(13, 27, 42, 0.70);
+  --surface-card:   rgba(10, 26, 15, 0.75);
+  --surface-parch:  rgba(240, 230, 200, 0.95);
+
+  /* Typography */
+  --font-serif: Georgia, 'Times New Roman', serif;
+
+  /* Spacing */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  2rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+
+  /* Layout */
+  --max-width: 1200px;
+  --header-h:  70px;
+
+  /* Motion */
+  --ease:      cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --dur-fast:  0.18s;
+  --dur-mid:   0.35s;
+  --dur-slow:  0.6s;
+
+  /* Radius */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+}
+
+/* --- Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--night-deep);
+  color: var(--text-primary);
+  line-height: 1.7;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--gold-soft);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+a:hover, a:focus {
+  color: var(--gold-bright);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--text-heading);
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+}
+
+p {
+  color: var(--text-primary);
+  max-width: 70ch;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-serif);
+  border: none;
+  background: none;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* --- Utility classes --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 var(--space-md); }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Page transition --- */
+.page-enter {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--dur-slow) var(--ease),
+              transform var(--dur-slow) var(--ease);
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--night-deep); }
+::-webkit-scrollbar-thumb { background: var(--border-gold-hi); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold-soft); }
+
+/* --- Selection --- */
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: var(--parchment);
+}

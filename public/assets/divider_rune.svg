@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 36" preserveAspectRatio="xMidYMid meet">
+  <!-- Left line fading in -->
+  <defs>
+    <linearGradient id="lineLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="lineRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Left line -->
+  <line x1="0" y1="18" x2="248" y2="18" stroke="url(#lineLeft)" stroke-width="1"/>
+  <!-- Right line -->
+  <line x1="352" y1="18" x2="600" y2="18" stroke="url(#lineRight)" stroke-width="1"/>
+  <!-- Left rune marks -->
+  <line x1="232" y1="10" x2="232" y2="26" stroke="#c9a84c" stroke-width="1" opacity="0.8"/>
+  <line x1="240" y1="10" x2="240" y2="26" stroke="#c9a84c" stroke-width="1" opacity="0.8"/>
+  <line x1="236" y1="10" x2="232" y2="18" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
+  <!-- Right rune marks -->
+  <line x1="360" y1="10" x2="360" y2="26" stroke="#c9a84c" stroke-width="1" opacity="0.8"/>
+  <line x1="368" y1="10" x2="368" y2="26" stroke="#c9a84c" stroke-width="1" opacity="0.8"/>
+  <line x1="364" y1="10" x2="368" y2="18" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
+  <!-- Center diamond ornament -->
+  <polygon points="300,4 320,18 300,32 280,18" fill="none" stroke="#d4af37" stroke-width="1.5"/>
+  <polygon points="300,9 315,18 300,27 285,18" fill="#d4af37" opacity="0.2"/>
+  <!-- Center star point -->
+  <polygon points="300,12 302,17 307,17 303,20 305,25 300,22 295,25 297,20 293,17 298,17" fill="#d4af37" opacity="0.8"/>
+</svg>

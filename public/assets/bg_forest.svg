@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="forestSky" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#1a2d45"/>
+      <stop offset="60%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#070d14"/>
+    </radialGradient>
+    <linearGradient id="fogGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a4a3a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1a3a2a" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="moonGlow" cx="60%" cy="15%" r="30%">
+      <stop offset="0%" stop-color="#e8d5a3" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e8d5a3" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="1200" height="800" fill="url(#forestSky)"/>
+  <!-- Moon -->
+  <circle cx="720" cy="120" r="50" fill="#e8d5a3" opacity="0.15"/>
+  <circle cx="720" cy="120" r="35" fill="#f0e6c8" opacity="0.25"/>
+  <circle cx="720" cy="120" r="22" fill="#f5edd8" opacity="0.3"/>
+  <!-- Moon glow -->
+  <circle cx="720" cy="120" r="80" fill="#e8d5a3" opacity="0.05"/>
+  <!-- Stars -->
+  <g fill="white" opacity="0.6">
+    <circle cx="100" cy="80" r="1" opacity="0.7"/>
+    <circle cx="250" cy="60" r="1.2" opacity="0.8"/>
+    <circle cx="400" cy="90" r="0.8" opacity="0.6"/>
+    <circle cx="550" cy="70" r="1.0" opacity="0.7"/>
+    <circle cx="900" cy="80" r="0.9" opacity="0.65"/>
+    <circle cx="1050" cy="55" r="1.1" opacity="0.75"/>
+    <circle cx="1150" cy="100" r="0.7" opacity="0.6"/>
+    <circle cx="180" cy="150" r="0.8" opacity="0.55"/>
+    <circle cx="850" cy="140" r="1.0" opacity="0.65"/>
+    <circle cx="1000" cy="160" r="0.7" opacity="0.55"/>
+  </g>
+  <!-- Far background trees (very dark, misty) -->
+  <g fill="#0d1f14" opacity="0.7">
+    <path d="M-10 500 L20 380 L50 500 Z"/>
+    <path d="M40 510 L80 360 L120 510 Z"/>
+    <path d="M100 505 L140 370 L180 505 Z"/>
+    <path d="M160 508 L200 355 L240 508 Z"/>
+    <path d="M220 500 L265 340 L310 500 Z"/>
+    <path d="M290 510 L335 350 L380 510 Z"/>
+    <path d="M360 505 L400 365 L440 505 Z"/>
+    <path d="M420 500 L465 345 L510 500 Z"/>
+    <path d="M490 508 L535 360 L580 508 Z"/>
+    <path d="M560 502 L605 350 L650 502 Z"/>
+    <path d="M630 506 L675 355 L720 506 Z"/>
+    <path d="M700 500 L748 340 L796 500 Z"/>
+    <path d="M770 508 L815 352 L860 508 Z"/>
+    <path d="M840 504 L882 348 L924 504 Z"/>
+    <path d="M910 500 L955 345 L1000 500 Z"/>
+    <path d="M980 508 L1025 360 L1070 508 Z"/>
+    <path d="M1050 505 L1095 365 L1140 505 Z"/>
+    <path d="M1120 500 L1165 348 L1210 500 Z"/>
+  </g>
+  <!-- Mist layer -->
+  <rect x="0" y="450" width="1200" height="120" fill="#1a3a2a" opacity="0.3"/>
+  <!-- Mid ground trees -->
+  <g fill="#0a1a0f" opacity="0.85">
+    <path d="M-20 600 L30 440 L80 600 Z"/>
+    <path d="M60 610 L120 420 L180 610 Z"/>
+    <path d="M155 600 L215 430 L275 600 Z"/>
+    <path d="M260 608 L325 415 L390 608 Z"/>
+    <path d="M375 600 L440 425 L505 600 Z"/>
+    <path d="M490 605 L555 420 L620 605 Z"/>
+    <path d="M610 600 L675 418 L740 600 Z"/>
+    <path d="M730 608 L798 410 L866 608 Z"/>
+    <path d="M860 600 L928 422 L996 600 Z"/>
+    <path d="M990 605 L1055 415 L1120 605 Z"/>
+    <path d="M1110 600 L1175 428 L1240 600 Z"/>
+  </g>
+  <!-- Ground fog -->
+  <rect x="0" y="560" width="1200" height="240" fill="url(#fogGrad)"/>
+  <!-- Foreground dark ground -->
+  <rect x="0" y="680" width="1200" height="120" fill="#06100a"/>
+  <!-- Foreground close trees (silhouette) -->
+  <g fill="#040c07">
+    <path d="M-30 800 L-30 550 L10 450 L50 550 L50 800 Z"/>
+    <path d="M80 800 L80 520 L125 400 L170 520 L170 800 Z"/>
+    <path d="M1030 800 L1030 520 L1075 400 L1120 520 L1120 800 Z"/>
+    <path d="M1150 800 L1150 555 L1190 455 L1230 555 L1230 800 Z"/>
+  </g>
+</svg>

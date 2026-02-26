@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    <linearGradient id="parchGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f2e4c0"/>
+      <stop offset="30%" stop-color="#e8d5a3"/>
+      <stop offset="70%" stop-color="#dcc896"/>
+      <stop offset="100%" stop-color="#c8b078"/>
+    </linearGradient>
+    <radialGradient id="parchVignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#f0e6c8"/>
+      <stop offset="70%" stop-color="#d4b896"/>
+      <stop offset="100%" stop-color="#a07828"/>
+    </radialGradient>
+    <filter id="noise">
+      <feTurbulence type="turbulence" baseFrequency="0.9" numOctaves="4" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <!-- Base parchment -->
+  <rect width="800" height="600" fill="url(#parchGrad)"/>
+  <!-- Vignette overlay -->
+  <rect width="800" height="600" fill="url(#parchVignette)" opacity="0.35"/>
+  <!-- Paper texture with noise filter -->
+  <rect width="800" height="600" fill="#c8a96e" filter="url(#paper)" opacity="0.15"/>
+  <!-- Age spots / irregular texture marks -->
+  <circle cx="120" cy="80" r="40" fill="#b89040" opacity="0.08"/>
+  <circle cx="680" cy="520" r="60" fill="#a07828" opacity="0.1"/>
+  <circle cx="50" cy="550" r="45" fill="#8b6914" opacity="0.12"/>
+  <circle cx="750" cy="60" r="35" fill="#a07828" opacity="0.09"/>
+  <circle cx="400" cy="300" r="80" fill="#d4b896" opacity="0.07"/>
+  <!-- Subtle horizontal line marks (like old paper folds) -->
+  <line x1="0" y1="200" x2="800" y2="198" stroke="#a07828" stroke-width="0.5" opacity="0.2"/>
+  <line x1="0" y1="400" x2="800" y2="402" stroke="#a07828" stroke-width="0.4" opacity="0.15"/>
+  <!-- Corner darkening -->
+  <circle cx="0" cy="0" r="150" fill="#8b6914" opacity="0.15"/>
+  <circle cx="800" cy="0" r="120" fill="#8b6914" opacity="0.12"/>
+  <circle cx="0" cy="600" r="130" fill="#8b6914" opacity="0.14"/>
+  <circle cx="800" cy="600" r="140" fill="#8b6914" opacity="0.16"/>
+  <!-- Edge burn effect -->
+  <rect width="800" height="600" fill="none" stroke="#6b4a10" stroke-width="8" opacity="0.2"/>
+</svg>

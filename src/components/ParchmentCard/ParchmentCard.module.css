@@ -1,0 +1,95 @@
+.card {
+  position: relative;
+  padding: var(--space-lg) var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-gold);
+  transition: transform var(--dur-mid) var(--ease),
+              box-shadow var(--dur-mid) var(--ease),
+              border-color var(--dur-mid) var(--ease);
+  overflow: hidden;
+}
+
+/* Light mode (parchment) */
+.light {
+  background: rgba(240, 230, 200, 0.07);
+  backdrop-filter: blur(4px);
+}
+
+/* Dark mode (night) */
+.dark {
+  background: rgba(10, 26, 15, 0.75);
+  backdrop-filter: blur(6px);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border-gold);
+  border-color: var(--border-gold-hi);
+}
+
+/* Accent variant */
+.accent {
+  border-color: var(--border-gold-hi);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.accent:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+/* Icon */
+.iconWrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.icon {
+  width: 72px;
+  height: 72px;
+  transition: filter var(--dur-mid) var(--ease), transform var(--dur-mid) var(--ease);
+}
+
+.card:hover .icon {
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+  transform: scale(1.06);
+}
+
+/* Title */
+.title {
+  font-size: 1.1rem;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  color: var(--gold-soft);
+  text-align: center;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-gold);
+}
+
+/* Body */
+.body {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.body p { max-width: none; }
+
+/* Corner ornaments */
+.corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--gold-soft);
+  border-style: solid;
+  opacity: 0.4;
+  transition: opacity var(--dur-mid) var(--ease);
+}
+
+.card:hover .corner { opacity: 0.8; }
+
+.tl { top: 8px;  left: 8px;  border-width: 1px 0 0 1px; }
+.tr { top: 8px;  right: 8px; border-width: 1px 1px 0 0; }
+.bl { bottom: 8px; left: 8px;  border-width: 0 0 1px 1px; }
+.br { bottom: 8px; right: 8px; border-width: 0 1px 1px 0; }

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="fireGlow" cx="50%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#ff9800" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ff9800" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Ground glow -->
+  <ellipse cx="50" cy="82" rx="28" ry="8" fill="url(#fireGlow)"/>
+  <!-- Logs -->
+  <rect x="20" y="76" width="60" height="7" rx="3.5" fill="#5a3010" transform="rotate(-8 50 79)"/>
+  <rect x="20" y="76" width="60" height="7" rx="3.5" fill="#6b3a15" transform="rotate(8 50 79)"/>
+  <!-- Embers -->
+  <ellipse cx="50" cy="80" rx="18" ry="5" fill="#c0440a" opacity="0.7"/>
+  <!-- Outer flame (red-orange) -->
+  <path d="M50 74 C42 64 38 52 42 38 C44 30 47 23 50 16 C53 23 56 30 58 38 C62 52 58 64 50 74 Z"
+        fill="#e85d04" opacity="0.9"/>
+  <!-- Middle flame (orange) -->
+  <path d="M50 74 C40 62 37 50 40 38 C42 30 46 24 48 18 C50 26 52 34 54 42 C57 54 55 64 50 74 Z"
+        fill="#f48c06" opacity="0.9"/>
+  <!-- Inner flame (yellow-orange) -->
+  <path d="M50 74 C44 64 43 54 45 44 C47 36 49 30 50 24 C51 30 53 36 55 44 C57 54 56 64 50 74 Z"
+        fill="#faa307"/>
+  <!-- Core (bright yellow) -->
+  <path d="M50 72 C47 64 47 56 48 48 C49 42 50 37 50 33 C51 37 52 42 52 48 C53 56 53 64 50 72 Z"
+        fill="#ffd000" opacity="0.85"/>
+  <!-- Spark particles -->
+  <circle cx="44" cy="32" r="1.2" fill="#ffd000" opacity="0.7"/>
+  <circle cx="57" cy="26" r="0.9" fill="#ffd000" opacity="0.5"/>
+  <circle cx="40" cy="44" r="0.7" fill="#ffa500" opacity="0.6"/>
+</svg>
