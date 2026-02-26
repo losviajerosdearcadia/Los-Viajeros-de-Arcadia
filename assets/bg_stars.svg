@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="skyGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#1a2d45"/>
+      <stop offset="50%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#070d14"/>
+    </radialGradient>
+    <radialGradient id="milkyWay" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a3a5a" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#2a3a5a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="starBlur"><feGaussianBlur stdDeviation="0.5"/></filter>
+  </defs>
+  <!-- Sky background -->
+  <rect width="1200" height="800" fill="url(#skyGrad)"/>
+  <!-- Milky way hint -->
+  <ellipse cx="700" cy="400" rx="600" ry="120" fill="url(#milkyWay)" transform="rotate(-20 700 400)"/>
+  <!-- Stars - various sizes and opacities -->
+  <g fill="white">
+    <!-- Bright stars -->
+    <circle cx="120" cy="80" r="1.8" opacity="0.95"/>
+    <circle cx="340" cy="60" r="2.2" opacity="0.9" filter="url(#starBlur)"/>
+    <circle cx="580" cy="45" r="1.5" opacity="0.85"/>
+    <circle cx="800" cy="70" r="2.0" opacity="0.92"/>
+    <circle cx="1050" cy="55" r="1.7" opacity="0.88"/>
+    <circle cx="200" cy="140" r="1.4" opacity="0.75"/>
+    <circle cx="460" cy="120" r="1.9" opacity="0.82"/>
+    <circle cx="700" cy="100" r="1.3" opacity="0.7"/>
+    <circle cx="920" cy="130" r="2.1" opacity="0.9"/>
+    <circle cx="1150" cy="100" r="1.6" opacity="0.8"/>
+    <!-- Medium stars -->
+    <circle cx="80" cy="200" r="1.1" opacity="0.6"/>
+    <circle cx="280" cy="180" r="0.9" opacity="0.55"/>
+    <circle cx="480" cy="220" r="1.2" opacity="0.65"/>
+    <circle cx="660" cy="195" r="1.0" opacity="0.6"/>
+    <circle cx="840" cy="210" r="0.8" opacity="0.5"/>
+    <circle cx="1020" cy="185" r="1.1" opacity="0.62"/>
+    <circle cx="1160" cy="220" r="0.9" opacity="0.57"/>
+    <!-- Small stars -->
+    <circle cx="150" cy="300" r="0.6" opacity="0.45"/>
+    <circle cx="320" cy="280" r="0.7" opacity="0.5"/>
+    <circle cx="500" cy="310" r="0.5" opacity="0.42"/>
+    <circle cx="680" cy="295" r="0.8" opacity="0.55"/>
+    <circle cx="860" cy="315" r="0.6" opacity="0.47"/>
+    <circle cx="1040" cy="285" r="0.7" opacity="0.52"/>
+    <!-- More scattered -->
+    <circle cx="60" cy="350" r="1.0" opacity="0.58"/>
+    <circle cx="240" cy="370" r="0.6" opacity="0.44"/>
+    <circle cx="410" cy="340" r="1.2" opacity="0.63"/>
+    <circle cx="590" cy="380" r="0.5" opacity="0.4"/>
+    <circle cx="770" cy="355" r="0.9" opacity="0.56"/>
+    <circle cx="950" cy="375" r="1.1" opacity="0.6"/>
+    <circle cx="1100" cy="345" r="0.7" opacity="0.48"/>
+    <!-- North Star (prominent) -->
+    <circle cx="600" cy="90" r="2.8" opacity="1.0" filter="url(#starBlur)"/>
+    <circle cx="600" cy="90" r="1.5" opacity="1.0"/>
+    <!-- More stars across the scene -->
+    <circle cx="170" cy="440" r="0.8" opacity="0.52"/>
+    <circle cx="390" cy="420" r="0.6" opacity="0.45"/>
+    <circle cx="550" cy="460" r="1.0" opacity="0.6"/>
+    <circle cx="730" cy="435" r="0.7" opacity="0.49"/>
+    <circle cx="890" cy="450" r="0.9" opacity="0.55"/>
+    <circle cx="1080" cy="425" r="0.5" opacity="0.42"/>
+  </g>
+  <!-- Horizon forest silhouette -->
+  <path d="M0 620 L0 800 L1200 800 L1200 620
+    Q1150 600 1120 580 L1100 540 L1080 580 L1060 530 L1040 570 L1020 510 L1000 555 L980 500 L960 548 L940 490 L920 545 L900 495 L880 550 L860 500 L840 560 L820 510 L800 570 L780 520 L760 575 L740 530 L720 580 L700 535 L680 590 L660 545 L640 600 L620 555 L600 605 L580 558 L560 608 L540 560 L520 610 L500 565 L480 612 L460 568 L440 615 L420 572 L400 618 L380 575 L360 620 L340 580 L320 622 L300 582 L280 618 L260 576 L240 620 L220 575 L200 618 L180 572 L160 615 L140 568 L120 612 L100 565 L80 610 L60 562 L40 608 L20 565 L0 620 Z"
+        fill="#0a1a0f" opacity="0.9"/>
+  <!-- Slightly lighter tree layer in front -->
+  <path d="M0 680 L0 800 L1200 800 L1200 680
+    Q1180 665 1160 645 L1140 660 L1120 638 L1100 655 L1080 630 L1060 648 L1040 625 L1020 645 L1000 622 L980 642 L960 620 L940 640 L920 618 L900 638 L880 615 L860 635 L840 612 L820 632 L800 610 L780 630 L760 608 L740 628 L720 606 L700 626 L680 605 L660 625 L640 605 L620 625 L600 605 L580 625 L560 605 L540 625 L520 605 L500 625 L480 608 L460 628 L440 610 L420 630 L400 612 L380 630 L360 614 L340 632 L320 616 L300 634 L280 618 L260 636 L240 620 L220 638 L200 622 L180 640 L160 625 L140 643 L120 628 L100 645 L80 630 L60 647 L40 632 L20 648 L0 635 Z"
+        fill="#0d2010" opacity="0.95"/>
+</svg>

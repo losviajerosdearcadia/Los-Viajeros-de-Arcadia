@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="starGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f0e060"/>
+      <stop offset="60%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="starGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Glow halo -->
+  <circle cx="50" cy="50" r="30" fill="url(#starGrad)" opacity="0.25"/>
+  <!-- 4 main points (compass rose style) -->
+  <path d="M50 8 L54 46 L50 50 L46 46 Z" fill="#f0e070"/>
+  <path d="M92 50 L54 54 L50 50 L54 46 Z" fill="#d4af37"/>
+  <path d="M50 92 L46 54 L50 50 L54 54 Z" fill="#d4af37"/>
+  <path d="M8 50 L46 46 L50 50 L46 54 Z" fill="#d4af37"/>
+  <!-- 4 secondary points -->
+  <path d="M78 22 L54 47 L50 50 L53 46 Z" fill="#c9a84c" opacity="0.8"/>
+  <path d="M78 78 L53 54 L50 50 L54 53 Z" fill="#c9a84c" opacity="0.8"/>
+  <path d="M22 78 L47 53 L50 50 L46 54 Z" fill="#c9a84c" opacity="0.8"/>
+  <path d="M22 22 L46 46 L50 50 L47 47 Z" fill="#c9a84c" opacity="0.8"/>
+  <!-- Center -->
+  <circle cx="50" cy="50" r="5" fill="#0d1b2a" stroke="#d4af37" stroke-width="1.5"/>
+  <circle cx="50" cy="50" r="2" fill="#f0e070" filter="url(#starGlow)"/>
+  <!-- Outer ring -->
+  <circle cx="50" cy="50" r="40" fill="none" stroke="#c9a84c" stroke-width="0.6" opacity="0.4" stroke-dasharray="3,5"/>
+</svg>

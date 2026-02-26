@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140">
+  <defs>
+    <radialGradient id="crestGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1a3a2a"/>
+      <stop offset="100%" stop-color="#070d14"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Shield -->
+  <path d="M60 6 L114 24 L114 82 Q114 118 60 134 Q6 118 6 82 L6 24 Z"
+        fill="url(#crestGrad)" stroke="#c9a84c" stroke-width="2"/>
+  <!-- Inner shield border -->
+  <path d="M60 16 L104 31 L104 80 Q104 110 60 124 Q16 110 16 80 L16 31 Z"
+        fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+  <!-- 8-pointed star -->
+  <polygon points="60,30 64,48 82,48 68,58 73,76 60,66 47,76 52,58 38,48 56,48"
+           fill="#d4af37" filter="url(#glow)"/>
+  <!-- Star inner detail -->
+  <polygon points="60,36 63,48 73,48 65,54 68,66 60,60 52,66 55,54 47,48 57,48"
+           fill="#f0d060" opacity="0.5"/>
+  <!-- Decorative horizontal lines -->
+  <line x1="22" y1="88" x2="98" y2="88" stroke="#c9a84c" stroke-width="0.7" opacity="0.6"/>
+  <!-- Text: ARCADIA -->
+  <text x="60" y="104" text-anchor="middle" font-size="10"
+        fill="#c9a84c" font-family="Georgia, serif" letter-spacing="3" font-variant="small-caps">ARCADIA</text>
+  <!-- Small decorative dots -->
+  <circle cx="26" cy="88" r="2" fill="#c9a84c" opacity="0.7"/>
+  <circle cx="94" cy="88" r="2" fill="#c9a84c" opacity="0.7"/>
+</svg>
